@@ -53,6 +53,7 @@ module "my_user" {
     source  = "git::https://github.com/AdventielFr/terraform-aws-iam-user.git?ref=1.0.0"
     name = "my-user"
     email = "my-user@no-reply.com"
+    aws_region = "eu-west-1"
 }
 
 `````
