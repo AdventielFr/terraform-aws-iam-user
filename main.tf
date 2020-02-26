@@ -36,7 +36,7 @@ locals {
 #--------------------------------------------------------------------------
 resource "aws_iam_user" "this" {
   name = local.name
-  tags = merge(var.tags, map("IamRotateCredentials:Email", var.email))
+  tags = var.tags
   lifecycle {
     ignore_changes = [
       tags,
