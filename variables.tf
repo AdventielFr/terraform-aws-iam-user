@@ -32,8 +32,8 @@ variable "public_key" {
 }
 
 variable "password_reset_required" {
-  type    = bool
-  default = true
+  type        = bool
+  default     = true
   description = "Whether the user should be forced to reset the generated password on resource creation."
 }
 

@@ -16,20 +16,20 @@ output "user_name" {
 
 output "user_encrypted_password" {
   description = "The encrypted password, base64 encoded."
-  value = join ("",aws_iam_user_login_profile.this.*.encrypted_password )
+  value       = join("", aws_iam_user_login_profile.this.*.encrypted_password)
 }
 
 output "user_key_fingerprint" {
   description = "The fingerprint of the PGP key used to encrypt the password."
-  value = join ("",aws_iam_user_login_profile.this.*.key_fingerprint )
+  value       = join("", aws_iam_user_login_profile.this.*.key_fingerprint)
 }
 
 output "user_access_key" {
   description = "The access key ID."
-  value = join("",aws_iam_access_key.this.*.id)
+  value       = join("", aws_iam_access_key.this.*.id)
 }
 
 output "user_secret_key" {
   description = "The secret access key. Note that this will be written to the state file."
-  value = join("",aws_iam_access_key.this.*.secret)
+  value       = join("", aws_iam_access_key.this.*.secret)
 }
