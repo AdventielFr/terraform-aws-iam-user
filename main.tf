@@ -50,6 +50,9 @@ resource "aws_iam_access_key" "this" {
   count   = var.cli_access ? 1 : 0
   user    = aws_iam_user.this.name
   pgp_key = local.gpg_public_key
+  depends_on = [
+    aws_iam_user.this
+  ]
 }
 
 #--------------------------------------------------------------------------
