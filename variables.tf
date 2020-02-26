@@ -1,3 +1,7 @@
+variable "aws_region" {
+  type        = string
+  description = "Aws region"
+}
 
 variable "name" {
   type        = string

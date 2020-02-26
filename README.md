@@ -3,7 +3,7 @@
     <tr>
       <td style="text-align: center; vertical-align: middle;"><img src="_docs/logo_aws.jpg"/></td>
       <td style="text-align: center; vertical-align: middle;"><img src="_docs/logo_adv.jpg"/></td>
-    </tr> 
+    </tr>
   <table>
 </p>
 
@@ -23,6 +23,7 @@ The purpose of this module is to create an user with iam-rotate-credential.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
+| aws\_region | Aws region | `string` | n/a | yes |
 | cli\_access | Allow access AWS Cli if the value is true | `bool` | `true` | no |
 | console\_access | Allow access Web AWS console if the value is true | `bool` | `true` | no |
 | email | Email of user | `string` | n/a | yes |
