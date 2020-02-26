@@ -11,7 +11,7 @@ resource "random_string" "random" {
   upper   = false
   keepers = {
     # Generate a new id each time we switch to a new AMI id
-    name = local.name
+    name = var.name
   }
 }
 
@@ -28,14 +28,13 @@ data "local_file" "this" {
 #--------------------------------------------------------------------------
 locals {
   gpg_public_key = data.local_file.this.content
-  name           = var.name == "" ? var.email : var.name
 }
 
 #--------------------------------------------------------------------------
 # IAM User
 #--------------------------------------------------------------------------
 resource "aws_iam_user" "this" {
-  name = local.name
+  name = var.name
   tags = var.tags
   lifecycle {
     ignore_changes = [

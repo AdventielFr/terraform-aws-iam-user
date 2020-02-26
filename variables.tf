@@ -9,11 +9,6 @@ variable "name" {
   default     = ""
 }
 
-variable "email" {
-  description = " Email of user"
-  type        = string
-}
-
 variable "tags" {
   type    = map
   default = {}
