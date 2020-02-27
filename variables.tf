@@ -17,13 +17,13 @@ variable "tags" {
 variable "cli_access" {
   description = "Allow access AWS Cli if the value is true"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "console_access" {
   description = "Allow access Web AWS console if the value is true"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "public_key" {
